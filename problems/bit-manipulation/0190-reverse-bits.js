@@ -1,3 +1,13 @@
+/**
+ * #190 颠倒二进制位
+ * 标签：位运算
+ * 状态：待复盘
+ *
+ * 旧解法使用二进制字符串反转；需要注意不足 32 位时的前导零。
+ * 时间复杂度：O(32)
+ * 空间复杂度：O(32)
+ */
+
 // 颠倒给定的 32 位无符号整数的二进制位。
 
 //
@@ -52,7 +62,9 @@
  * @return {number} - a positive integer
  */
 var reverseBits = function (n) {
-  var bits = n.toString(2)
+  var bits = n.toString(2).padStart(32, '0')
 
   return parseInt(bits.split('').reverse().join(''), 2)
 }
+
+module.exports = reverseBits

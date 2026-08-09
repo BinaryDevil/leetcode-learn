@@ -1,3 +1,12 @@
+/**
+ * #474 一和零
+ * 标签：动态规划、背包
+ * 状态：已完成
+ *
+ * 时间复杂度：O(lmn)
+ * 空间复杂度：O(lmn)
+ */
+
 var findMaxForm = function (strs, m, n) {
   const length = strs.length
   const dp = new Array(length + 1)
@@ -30,3 +39,5 @@ const getZerosOnes = (str) => {
   }
   return zerosOnes
 }
+
+module.exports = findMaxForm

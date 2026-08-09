@@ -1,0 +1,12 @@
+{
+  "name": "leetcode-learn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal LeetCode practice notes and solutions",
+  "scripts": {
+    "test": "node scripts/check-solutions.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

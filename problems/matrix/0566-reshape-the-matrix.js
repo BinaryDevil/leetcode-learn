@@ -1,4 +1,13 @@
 /**
+ * #566 重塑矩阵
+ * 标签：矩阵
+ * 状态：已完成
+ *
+ * 时间复杂度：O(mn)
+ * 空间复杂度：O(rc)
+ */
+
+/**
  * @param {number[][]} nums
  * @param {number} r
  * @param {number} c
@@ -27,3 +36,5 @@ var matrixReshape = function (nums, r, c) {
     return nums
   }
 }
+
+module.exports = matrixReshape
