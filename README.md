@@ -41,3 +41,8 @@ npm test
 ```
 
 该命令会检查所有题解文件是否能被 Node.js 解析。它不依赖第三方包。
+
+## 学习资料
+
+- [求职算法路线图](docs/interview-algorithm-roadmap.md)：按面试实用度排列的题型重点与推荐题单。
+- [学习计划](docs/study-plan.md)：日常刷题和复盘节奏。
