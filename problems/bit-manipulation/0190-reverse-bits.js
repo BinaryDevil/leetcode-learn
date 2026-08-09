@@ -54,7 +54,7 @@
 // 输入是一个长度为 32 的二进制字符串
 
 // 来源：力扣（LeetCode）
-// 链接：https://leetcode-cn.com/problems/reverse-bits
+// 链接：https://leetcode.com/problems/reverse-bits/
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 /**

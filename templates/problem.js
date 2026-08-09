@@ -1,7 +1,7 @@
 /**
  * #0000 题目名称
  *
- * 链接：https://leetcode.cn/problems/<slug>/
+ * 链接：https://leetcode.com/problems/<slug>/
  * 标签：数组
  * 难度：Easy
  * 状态：进行中
