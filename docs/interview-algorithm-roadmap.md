@@ -28,14 +28,14 @@
 
 | 题号 | 题目 | 关键模式 |
 | --- | --- | --- |
-| 1 | 两数之和 | 哈希表查补数 |
-| 49 | 字母异位词分组 | 哈希键设计 |
-| 128 | 最长连续序列 | 哈希集合 |
-| 238 | 除自身以外数组的乘积 | 前后缀 |
-| 3 | 无重复字符的最长子串 | 滑动窗口 |
-| 11 | 盛最多水的容器 | 对撞双指针 |
-| 15 | 三数之和 | 排序 + 双指针 |
-| 560 | 和为 K 的子数组 | 前缀和 + 哈希 |
+| 1 | [两数之和](https://leetcode.com/problems/two-sum/) | 哈希表查补数 |
+| 49 | [字母异位词分组](https://leetcode.com/problems/group-anagrams/) | 哈希键设计 |
+| 128 | [最长连续序列](https://leetcode.com/problems/longest-consecutive-sequence/) | 哈希集合 |
+| 238 | [除自身以外数组的乘积](https://leetcode.com/problems/product-of-array-except-self/) | 前后缀 |
+| 3 | [无重复字符的最长子串](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 滑动窗口 |
+| 11 | [盛最多水的容器](https://leetcode.com/problems/container-with-most-water/) | 对撞双指针 |
+| 15 | [三数之和](https://leetcode.com/problems/3sum/) | 排序 + 双指针 |
+| 560 | [和为 K 的子数组](https://leetcode.com/problems/subarray-sum-equals-k/) | 前缀和 + 哈希 |
 
 ## 2. 链表、栈与队列（P0）
 
@@ -43,14 +43,14 @@
 
 | 题号 | 题目 | 关键模式 |
 | --- | --- | --- |
-| 206 | 反转链表 | 指针迭代/递归 |
-| 21 | 合并两个有序链表 | 哑节点 |
-| 141 | 环形链表 | 快慢指针 |
-| 19 | 删除链表的倒数第 N 个结点 | 双指针间距 |
-| 143 | 重排链表 | 找中点 + 反转 + 合并 |
-| 20 | 有效的括号 | 栈匹配 |
-| 155 | 最小栈 | 辅助状态 |
-| 739 | 每日温度 | 单调栈 |
+| 206 | [反转链表](https://leetcode.com/problems/reverse-linked-list/) | 指针迭代/递归 |
+| 21 | [合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/) | 哑节点 |
+| 141 | [环形链表](https://leetcode.com/problems/linked-list-cycle/) | 快慢指针 |
+| 19 | [删除链表的倒数第 N 个结点](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 双指针间距 |
+| 143 | [重排链表](https://leetcode.com/problems/reorder-list/) | 找中点 + 反转 + 合并 |
+| 20 | [有效的括号](https://leetcode.com/problems/valid-parentheses/) | 栈匹配 |
+| 155 | [最小栈](https://leetcode.com/problems/min-stack/) | 辅助状态 |
+| 739 | [每日温度](https://leetcode.com/problems/daily-temperatures/) | 单调栈 |
 
 ## 3. 二分查找与滑动窗口（P0）
 
@@ -58,13 +58,13 @@
 
 | 题号 | 题目 | 关键模式 |
 | --- | --- | --- |
-| 704 | 二分查找 | 基础模板 |
-| 34 | 在排序数组中查找元素的第一个和最后一个位置 | 左右边界 |
-| 33 | 搜索旋转排序数组 | 二分分段判断 |
-| 74 | 搜索二维矩阵 | 二分查找 |
-| 875 | 爱吃香蕉的珂珂 | 二分答案 |
-| 76 | 最小覆盖子串 | 可变窗口 |
-| 438 | 找到字符串中所有字母异位词 | 定长窗口 |
+| 704 | [二分查找](https://leetcode.com/problems/binary-search/) | 基础模板 |
+| 34 | [在排序数组中查找元素的第一个和最后一个位置](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | 左右边界 |
+| 33 | [搜索旋转排序数组](https://leetcode.com/problems/search-in-rotated-sorted-array/) | 二分分段判断 |
+| 74 | [搜索二维矩阵](https://leetcode.com/problems/search-a-2d-matrix/) | 二分查找 |
+| 875 | [爱吃香蕉的珂珂](https://leetcode.com/problems/koko-eating-bananas/) | 二分答案 |
+| 76 | [最小覆盖子串](https://leetcode.com/problems/minimum-window-substring/) | 可变窗口 |
+| 438 | [找到字符串中所有字母异位词](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | 定长窗口 |
 
 ## 4. 二叉树与递归（P0）
 
@@ -72,13 +72,13 @@
 
 | 题号 | 题目 | 关键模式 |
 | --- | --- | --- |
-| 104 | 二叉树的最大深度 | 基础 DFS |
-| 102 | 二叉树的层序遍历 | BFS 队列 |
-| 226 | 翻转二叉树 | 递归改造 |
-| 98 | 验证二叉搜索树 | 上下界 / 中序 |
-| 236 | 二叉树的最近公共祖先 | 后序递归 |
-| 105 | 从前序与中序遍历序列构造二叉树 | 递归划分 |
-| 124 | 二叉树中的最大路径和 | 树形 DP |
+| 104 | [二叉树的最大深度](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 基础 DFS |
+| 102 | [二叉树的层序遍历](https://leetcode.com/problems/binary-tree-level-order-traversal/) | BFS 队列 |
+| 226 | [翻转二叉树](https://leetcode.com/problems/invert-binary-tree/) | 递归改造 |
+| 98 | [验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/) | 上下界 / 中序 |
+| 236 | [二叉树的最近公共祖先](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | 后序递归 |
+| 105 | [从前序与中序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | 递归划分 |
+| 124 | [二叉树中的最大路径和](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | 树形 DP |
 
 ## 5. 动态规划与回溯（P0）
 
@@ -86,14 +86,14 @@
 
 | 题号 | 题目 | 关键模式 |
 | --- | --- | --- |
-| 70 | 爬楼梯 | 一维 DP 入门 |
-| 198 | 打家劫舍 | 选或不选 |
-| 322 | 零钱兑换 | 完全背包 |
-| 300 | 最长递增子序列 | DP / 二分优化 |
-| 72 | 编辑距离 | 双序列 DP |
-| 46 | 全排列 | 回溯模板 |
-| 78 | 子集 | 枚举选择 |
-| 39 | 组合总和 | 剪枝 |
+| 70 | [爬楼梯](https://leetcode.com/problems/climbing-stairs/) | 一维 DP 入门 |
+| 198 | [打家劫舍](https://leetcode.com/problems/house-robber/) | 选或不选 |
+| 322 | [零钱兑换](https://leetcode.com/problems/coin-change/) | 完全背包 |
+| 300 | [最长递增子序列](https://leetcode.com/problems/longest-increasing-subsequence/) | DP / 二分优化 |
+| 72 | [编辑距离](https://leetcode.com/problems/edit-distance/) | 双序列 DP |
+| 46 | [全排列](https://leetcode.com/problems/permutations/) | 回溯模板 |
+| 78 | [子集](https://leetcode.com/problems/subsets/) | 枚举选择 |
+| 39 | [组合总和](https://leetcode.com/problems/combination-sum/) | 剪枝 |
 
 ## 6. 堆、贪心与区间（P1）
 
@@ -101,12 +101,12 @@
 
 | 题号 | 题目 | 关键模式 |
 | --- | --- | --- |
-| 215 | 数组中的第 K 个最大元素 | 小顶堆 / 快速选择 |
-| 347 | 前 K 个高频元素 | 哈希 + 堆 |
-| 23 | 合并 K 个升序链表 | 多路归并 |
-| 56 | 合并区间 | 排序扫描 |
-| 435 | 无重叠区间 | 区间贪心 |
-| 55 | 跳跃游戏 | 最远可达位置 |
+| 215 | [数组中的第 K 个最大元素](https://leetcode.com/problems/kth-largest-element-in-an-array/) | 小顶堆 / 快速选择 |
+| 347 | [前 K 个高频元素](https://leetcode.com/problems/top-k-frequent-elements/) | 哈希 + 堆 |
+| 23 | [合并 K 个升序链表](https://leetcode.com/problems/merge-k-sorted-lists/) | 多路归并 |
+| 56 | [合并区间](https://leetcode.com/problems/merge-intervals/) | 排序扫描 |
+| 435 | [无重叠区间](https://leetcode.com/problems/non-overlapping-intervals/) | 区间贪心 |
+| 55 | [跳跃游戏](https://leetcode.com/problems/jump-game/) | 最远可达位置 |
 
 ## 7. 图论（P1）
 
@@ -114,12 +114,12 @@
 
 | 题号 | 题目 | 关键模式 |
 | --- | --- | --- |
-| 200 | 岛屿数量 | 网格 DFS/BFS |
-| 994 | 腐烂的橘子 | 多源 BFS |
-| 207 | 课程表 | 拓扑排序 |
-| 133 | 克隆图 | 图遍历 + 哈希 |
-| 547 | 省份数量 | 并查集 / DFS |
-| 127 | 单词接龙 | 最短路 BFS |
+| 200 | [岛屿数量](https://leetcode.com/problems/number-of-islands/) | 网格 DFS/BFS |
+| 994 | [腐烂的橘子](https://leetcode.com/problems/rotting-oranges/) | 多源 BFS |
+| 207 | [课程表](https://leetcode.com/problems/course-schedule/) | 拓扑排序 |
+| 133 | [克隆图](https://leetcode.com/problems/clone-graph/) | 图遍历 + 哈希 |
+| 547 | [省份数量](https://leetcode.com/problems/number-of-provinces/) | 并查集 / DFS |
+| 127 | [单词接龙](https://leetcode.com/problems/word-ladder/) | 最短路 BFS |
 
 ## 8. 专项加分题（P2）
 
@@ -127,12 +127,12 @@
 
 | 题号 | 题目 | 关键模式 |
 | --- | --- | --- |
-| 84 | 柱状图中最大的矩形 | 单调栈 |
-| 42 | 接雨水 | 单调栈 / 双指针 |
-| 208 | 实现 Trie（前缀树） | 前缀树 |
-| 295 | 数据流的中位数 | 对顶堆 |
-| 136 | 只出现一次的数字 | 异或 |
-| 190 | 颠倒二进制位 | 位运算 |
+| 84 | [柱状图中最大的矩形](https://leetcode.com/problems/largest-rectangle-in-histogram/) | 单调栈 |
+| 42 | [接雨水](https://leetcode.com/problems/trapping-rain-water/) | 单调栈 / 双指针 |
+| 208 | [实现 Trie（前缀树）](https://leetcode.com/problems/implement-trie-prefix-tree/) | 前缀树 |
+| 295 | [数据流的中位数](https://leetcode.com/problems/find-median-from-data-stream/) | 对顶堆 |
+| 136 | [只出现一次的数字](https://leetcode.com/problems/single-number/) | 异或 |
+| 190 | [颠倒二进制位](https://leetcode.com/problems/reverse-bits/) | 位运算 |
 
 ## 面试前检查清单
 
