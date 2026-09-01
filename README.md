@@ -26,7 +26,10 @@
 | --- | --- | --- | --- |
 | 74 | [搜索二维矩阵](problems/binary-search/0074-search-a-2d-matrix.js) | 二分查找 | 已完成 |
 | 80 | [删除有序数组中的重复项 II](problems/array/0080-remove-duplicates-from-sorted-array-ii.js) | 数组 / 双指针 | 已完成 |
+| 11 | [盛最多水的容器](problems/array/0011-container-with-most-water.js) | 数组 / 双指针 | 已完成 |
+| 15 | [三数之和](problems/array/0015-3sum.js) | 数组 / 排序 / 双指针 | 已完成 |
 | 190 | [颠倒二进制位](problems/bit-manipulation/0190-reverse-bits.js) | 位运算 | 待复盘 |
+| 560 | [和为 K 的子数组](problems/array/0560-subarray-sum-equals-k.js) | 数组 / 前缀和 / 哈希表 | 已完成 |
 | 474 | [一和零](problems/dynamic-programming/0474-ones-and-zeroes.js) | 动态规划 | 已完成 |
 | 566 | [重塑矩阵](problems/matrix/0566-reshape-the-matrix.js) | 矩阵 | 已完成 |
 | 1006 | [笨阶乘](problems/math/1006-clumsy-factorial.js) | 数学 / 栈 | 已完成 |
@@ -46,3 +49,4 @@ npm test
 
 - [求职算法路线图](docs/interview-algorithm-roadmap.md)：按面试实用度排列的题型重点与推荐题单。
 - [学习计划](docs/study-plan.md)：日常刷题和复盘节奏。
+- [数组模式复习指南](docs/array-patterns-review-guide.md)：已完成数组、字符串、哈希与双指针题目的模式总结与复盘清单。
