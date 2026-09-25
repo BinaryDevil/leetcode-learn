@@ -10,9 +10,13 @@
 │   ├── array/
 │   ├── binary-search/
 │   ├── dynamic-programming/
+│   ├── graph/
+│   ├── heap/
+│   ├── linked-list/
 │   ├── matrix/
 │   ├── math/
 │   ├── sorting/
+│   ├── tree/
 │   └── bit-manipulation/
 ├── templates/             # 新题模板
 ├── docs/                  # 学习计划与复盘笔记
@@ -24,14 +28,45 @@
 
 | 编号 | 题目 | 主题 | 状态 |
 | --- | --- | --- | --- |
-| 74 | [搜索二维矩阵](problems/binary-search/0074-search-a-2d-matrix.js) | 二分查找 | 已完成 |
-| 80 | [删除有序数组中的重复项 II](problems/array/0080-remove-duplicates-from-sorted-array-ii.js) | 数组 / 双指针 | 已完成 |
+| 1 | [两数之和](problems/array/1.twoSum.js) | 数组 / 哈希表 | 已完成 |
+| 3 | [无重复字符的最长子串](problems/array/3.longest-substring-without-repeating-characters.js) | 字符串 / 滑动窗口 | 已完成 |
 | 11 | [盛最多水的容器](problems/array/0011-container-with-most-water.js) | 数组 / 双指针 | 已完成 |
 | 15 | [三数之和](problems/array/0015-3sum.js) | 数组 / 排序 / 双指针 | 已完成 |
+| 19 | [删除链表的倒数第 N 个结点](problems/linked-list/0019-remove-nth-node-from-end-of-list.js) | 链表 / 双指针 | 已完成 |
+| 20 | [有效的括号](problems/linked-list/0020-valid-parentheses.js) | 栈 | 已完成 |
+| 21 | [合并两个有序链表](problems/linked-list/0021-merge-two-sorted-lists.js) | 链表 | 已完成 |
+| 33 | [搜索旋转排序数组](problems/binary-search/0033-search-in-rotated-sorted-array.js) | 二分查找 | 已完成 |
+| 34 | [在排序数组中查找元素的第一个和最后一个位置](problems/binary-search/0034-find-first-and-last-position-in-sorted-array.js) | 二分查找 | 已完成 |
+| 49 | [字母异位词分组](problems/array/49.groupAnagrams.js) | 数组 / 哈希表 | 已完成 |
+| 53 | [最大子数组和](problems/array/0053-maximum-subarray.js) | 数组 / Kadane 算法 | 已完成 |
+| 74 | [搜索二维矩阵](problems/binary-search/0074-search-a-2d-matrix.js) | 矩阵 / 二分查找 | 已完成 |
+| 80 | [删除有序数组中的重复项 II](problems/array/80.remove-duplicates-from-sorted-array-ii.js) | 数组 / 双指针 | 已完成 |
+| 100 | [相同的树](problems/tree/0100-same-tree.js) | 二叉树 / 递归 | 已完成 |
+| 102 | [二叉树的层序遍历](problems/tree/0102-binary-tree-level-order-traversal.js) | 二叉树 / BFS | 已完成 |
+| 104 | [二叉树的最大深度](problems/tree/0104-maximum-depth-of-binary-tree.js) | 二叉树 / DFS | 已完成 |
+| 121 | [买卖股票的最佳时机](problems/array/0121-best-time-to-buy-and-sell-stock.js) | 数组 / 一次遍历 | 已完成 |
+| 125 | [验证回文串](problems/array/0125-valid-palindrome.js) | 字符串 / 双指针 | 已完成 |
+| 128 | [最长连续序列](problems/array/128.longestconsecutive.js) | 数组 / 哈希集合 | 已完成 |
+| 141 | [环形链表](problems/linked-list/0141-linked-list-cycle.js) | 链表 / 快慢指针 | 已完成 |
+| 143 | [重排链表](problems/linked-list/0143-reorder-list.js) | 链表 / 多步指针变换 | 已完成 |
+| 155 | [最小栈](problems/linked-list/0155-min-stack.js) | 栈 / 辅助状态 | 已完成 |
 | 190 | [颠倒二进制位](problems/bit-manipulation/0190-reverse-bits.js) | 位运算 | 待复盘 |
-| 560 | [和为 K 的子数组](problems/array/0560-subarray-sum-equals-k.js) | 数组 / 前缀和 / 哈希表 | 已完成 |
+| 200 | [岛屿数量](problems/graph/0200-number-of-islands.js) | 图 / 网格 DFS | 已完成 |
+| 206 | [反转链表](problems/linked-list/0206-reverse-linked-list.js) | 链表 / 指针迭代 | 已完成 |
+| 215 | [数组中的第 K 个最大元素](problems/heap/0215-kth-largest-element-in-an-array.js) | 堆 / Top K | 已完成 |
+| 226 | [翻转二叉树](problems/tree/0226-invert-binary-tree.js) | 二叉树 / 递归 | 已完成 |
+| 238 | [除自身以外数组的乘积](problems/array/238.ProductofArrayExceptSelf.js) | 数组 / 前后缀 | 已完成 |
+| 242 | [有效的字母异位词](problems/array/0242-valid-anagram.js) | 字符串 / 频次统计 | 已完成 |
+| 347 | [前 K 个高频元素](problems/heap/0347-top-k-frequent-elements.js) | 哈希表 / 堆 | 已完成 |
+| 438 | [找到字符串中所有字母异位词](problems/array/0438-find-all-anagrams-in-a-string.js) | 字符串 / 定长滑动窗口 | 已完成 |
 | 474 | [一和零](problems/dynamic-programming/0474-ones-and-zeroes.js) | 动态规划 | 已完成 |
+| 543 | [二叉树的直径](problems/tree/0543-diameter-of-binary-tree.js) | 二叉树 / DFS | 已完成 |
+| 560 | [和为 K 的子数组](problems/array/0560-subarray-sum-equals-k.js) | 数组 / 前缀和 / 哈希表 | 已完成 |
 | 566 | [重塑矩阵](problems/matrix/0566-reshape-the-matrix.js) | 矩阵 | 已完成 |
+| 704 | [二分查找](problems/binary-search/0704-binary-search.js) | 二分查找 | 已完成 |
+| 739 | [每日温度](problems/linked-list/0739-daily-temperatures.js) | 单调栈 | 已完成 |
+| 875 | [爱吃香蕉的珂珂](problems/binary-search/0875-koko-eating-bananas.js) | 二分答案 | 已完成 |
+| 973 | [最接近原点的 K 个点](problems/heap/0973-k-closest-points-to-origin.js) | 堆 / Top K | 已完成 |
 | 1006 | [笨阶乘](problems/math/1006-clumsy-factorial.js) | 数学 / 栈 | 已完成 |
 | 1268 | [搜索推荐系统](problems/sorting/1268-search-suggestions-system.js) | 排序 | 已完成 |
 

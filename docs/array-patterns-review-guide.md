@@ -11,8 +11,13 @@ Use this guide to revisit the first study-plan category: arrays, strings, hash m
 | 11 | [Container With Most Water](../problems/array/0011-container-with-most-water.js) | Opposing pointers | Evaluate both ends, then move the shorter wall inward. | O(n) time, O(1) space |
 | 15 | [3Sum](../problems/array/0015-3sum.js) | Sort + two pointers | Fix one number, then solve a sorted two-sum problem for the rest. | O(n²) time |
 | 49 | [Group Anagrams](../problems/array/49.groupAnagrams.js) | Hash by canonical key | Strings belong together when they have the same normalized representation. | O(total characters × log word length) time |
+| 53 | [Maximum Subarray](../problems/array/0053-maximum-subarray.js) | Kadane's algorithm | At each value, either extend the prior subarray or start a new one. | O(n) time, O(1) space |
+| 121 | [Best Time to Buy and Sell Stock](../problems/array/0121-best-time-to-buy-and-sell-stock.js) | One-pass state | Keep the lowest earlier price and best profit so far. | O(n) time, O(1) space |
+| 125 | [Valid Palindrome](../problems/array/0125-valid-palindrome.js) | Normalize + two pointers | Skip punctuation and compare alphanumeric characters from both ends. | O(n) time, O(1) space |
 | 128 | [Longest Consecutive Sequence](../problems/array/128.longestconsecutive.js) | Hash set / sequence starts | Only count forward from numbers with no predecessor. | O(n) time, O(n) space |
 | 238 | [Product of Array Except Self](../problems/array/238.ProductofArrayExceptSelf.js) | Prefix and suffix passes | Each result is the product before it times the product after it. | O(n) time, O(1) extra output space |
+| 242 | [Valid Anagram](../problems/array/0242-valid-anagram.js) | Frequency cancellation | Count one string, then subtract the counts from the other. | O(n) time, O(k) space |
+| 438 | [Find All Anagrams in a String](../problems/array/0438-find-all-anagrams-in-a-string.js) | Fixed-size sliding window | Keep the window the same length as the pattern and compare counts. | O(26n) time, O(1) space |
 | 560 | [Subarray Sum Equals K](../problems/array/0560-subarray-sum-equals-k.js) | Prefix sum + frequency map | A previous prefix sum of `currentSum - k` creates a valid subarray. | O(n) time, O(n) space |
 
 ## Pattern playbook
@@ -24,6 +29,9 @@ Use a map when a problem can be rewritten as “have I already seen the thing th
 - **Two Sum:** the needed value is `target - currentNumber`.
 - **Subarray Sum Equals K:** the needed earlier prefix is `currentPrefix - k`.
 - **Group Anagrams:** the key should be the same for every item in a group.
+- **Valid Anagram:** matching total length is necessary, then every character count must cancel.
+- **Best Time to Buy and Sell Stock:** buy at the lowest price seen before today; compare today's sale profit with the best so far.
+- **Maximum Subarray:** discard a negative running prefix when starting fresh at the current value is better.
 
 Checklist:
 
@@ -42,6 +50,10 @@ For problem 3, maintain this invariant:
 When a duplicate appears, move `left` and remove characters until the invariant is true again. Update the best length only after the window is valid.
 
 Warning: a regular sliding window does **not** solve 560, because negative values can make a sum go up or down unpredictably.
+
+For 438, the window has exactly the length of p. Add the new right character, remove the character that falls off the left, and compare frequency counts only once the window is full.
+
+For 125, move both ends inward while skipping characters outside the alphanumeric range; compare the remaining characters without regard to case.
 
 ### 3. Two pointers: use sortedness or an elimination argument
 
@@ -88,6 +100,8 @@ Use this short routine for every revisit:
 | 3Sum | Returning duplicate triplets | Did I skip duplicate fixed values and pointer values? |
 | Prefix sums | Forgetting the empty prefix | Does a valid range starting at index 0 work? |
 | Prefix frequency map | Using a set rather than counts | Can the same prefix occur more than once? |
+| Fixed-size window | Removing the wrong outgoing character | Is the removed index exactly right minus the window size? |
+| One-pass profit | Selling before the recorded buy day | Is the minimum updated using only prices through the current day? |
 | In-place arrays | Ignoring the required mutation/return convention | What does the caller need after the function returns? |
 
 ## Review schedule
