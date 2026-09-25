@@ -1,0 +1,15 @@
+"""#141 Linked List Cycle
+Floyd's pointers meet if the fast pointer laps the slow pointer in a cycle.
+Time: O(n) | Space: O(1)
+"""
+
+
+class Solution:
+    def hasCycle(self, head):
+        slow = fast = head
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+            if slow is fast:
+                return True
+        return False
