@@ -33,10 +33,10 @@ Everything lives under Notion → **Coding Knowledge → LeetCode** (Notion MCP 
 **Tracker database (source of truth for status and review dates):**
 - Database: https://app.notion.com/p/b8e6ae3700914ee28ac33e048b9877a8 (title: "LeetCode Problem Tracker")
 - Data source: `collection://9b69dbb5-a757-44f8-af36-4d5b68c11e50`
-- Properties: `Problem` (title), `Number`, `Link`, `Topic` (select), `Status` (select: `✅ Independent`, `🟡 Needs review`, `🔴 Read solution`, `⬜ Planned`), `Last solved` (date), `Next review` (date), `Notes`.
+- Properties: `Problem` (title), `Number`, `Link`, `Topic` (select), `Status` (select: `✅ Independent`, `🟡 Needs review`, `🔴 Read solution`, `⬜ Planned`), `Last solved` (date = last attempted and submitted, pass or fail), `Next review` (date), `Notes`.
 - Views: **Review queue** (excludes Planned, sorted by Next review ascending — the top rows are what to review next), **By status** (board), **All problems by topic**.
 - ~93 rows, one per problem, all with direct LeetCode links. To update a row: find it by `Number` (search / query the data source), then `notion-update-page` with `command: update_properties`. Date properties use `date:Last solved:start` / `date:Next review:start` (ISO `YYYY-MM-DD`).
-- After a **confirmed ✅**: set `Next review` = +7 days, then +30 days after the next pass. Otherwise leave 🟡 and keep the existing date. Always refresh `Last solved` and write a one-line `Notes` entry (what happened, the recall gap, the next step).
+- After a **confirmed ✅**: set `Next review` = +7 days, then +30 days after the next pass. Otherwise leave 🟡 and keep the existing date. Whenever the user attempts and submits a problem (pass or fail), set `Last solved` to that date and write a one-line `Notes` entry (what happened, the recall gap, the next step). `Last solved` drives the 2-day exclusion rule in §4.
 - Review dates were staggered ~4 problems/day starting 2026-09-30 (explicit re-solves first, then undated/old ones, then oldest-first).
 
 **Reference pages (explanations, traces, templates):**
@@ -57,7 +57,8 @@ Everything lives under Notion → **Coding Knowledge → LeetCode** (Notion MCP 
 
 **"Throw me a problem" / "next":**
 - Pick only from **reviewed-before (🟡/🔴) problems, not new ones**, unless the user asks for a new one.
-- **Randomize** (use a real random draw, e.g. Python `random.choice`), weighted toward the **oldest/undated** problems; the user complained that picking by queue order favors recent ones. Don't pick problems the user just worked on that day, or ones that are still un-attempted (#417, #76).
+- **Randomize** (use a real random draw, e.g. Python `random.choice`), weighted toward the **oldest/undated** problems; the user complained that picking by queue order favors recent ones.
+- **Exclusion rule (agreed 2026-09-30):** skip any problem whose `Last solved` is within the **last 2 days**. `Last solved` means "last attempted and submitted", whether it passed or not (e.g. #912 and #49 are dated but still 🟡). Problems that were thrown but **not attempted** leave `Last solved` untouched, so they can be thrown again. There is no separate "Last thrown" column; don't add one. Note #417 (🔴) has never been solved, so it is closer to a new problem; it is allowed in the draw but don't favor it.
 - Post: the problem in your own words with 2–3 examples, the **LeetCode link**, *why* you picked it, and the rules: (1) close notes, blank editor; (2) write the approach in 1–2 sentences before coding (pattern, what is tracked, edge case); (3) write Python and trace an example by hand; (4) send approach, time/space complexity, code, trace. **Do not name the pattern and do not hint.**
 - When the user submits: verify correctness by reasoning (run code if needed), check approach and complexity claims (recursion stack counts toward space; sorting adds `log`), note style issues, then rule ✅ vs 🟡 using the "one go" definition. Ask them whether it was the first Submit and how many runs if unclear. Then update the tracker row.
 
@@ -68,7 +69,7 @@ Everything lives under Notion → **Coding Knowledge → LeetCode** (Notion MCP 
 ## 5. Current state (snapshot as of 2026-09-30; the Notion tracker is authoritative)
 - **✅ Independent:** only #98 Validate BST (recall gap: recursion space is O(h), not O(1)).
 - **🟡 with notes:** #912 Sort an Array (merge sort, correct, ~5 runs), #49 Group Anagrams (sorted-key idea reasoned out; time is O(N·K log K) not O(n)), #547 Number of Provinces (DFS + Union-Find; wrote it, failed, fixed after feedback: tie merge, `range(n)` vs `list(range(n))`, `nonlocal`, backwards swap).
-- **Not attempted cold yet:** #76 Minimum Window Substring (user read the solution and asked about Counter `==` and `have == required`), #417 Pacific Atlantic (🔴).
+- **Not attempted cold yet:** #76 Minimum Window Substring (user read the solution and asked about Counter `==` and `have == required`), #417 Pacific Atlantic (🔴), #994 Rotting Oranges (thrown once, user asked for older problems instead). These may be thrown again.
 - **Open exercises:** (a) removal exercise on `t = "ABB"`, `s = "ABXBB"`: remove characters left one at a time and give `window`/`have` after each (user said they understood it); (b) the **4-city Union-Find paper trace** `[[1,0,0,1],[0,1,1,0],[0,1,1,0],[1,0,0,1]]`, expected `count = 2`, user owes `parent`/`size`/`count` after each union (an answer key is in the Union-Find guide, so the user shouldn't look at it first); then #684 Redundant Connection.
 - **Weak spots the user has named or shown:** recalling learned patterns; complexity statements (`log` factors, recursion space); operator-precedence/parentheses habits; Python details (`nonlocal`, `range` immutability, Counter semantics); `>` vs `<` in union by size.
 - **Not learned:** Trie (and bit manipulation, LRU/design problems, 2-D DP).
